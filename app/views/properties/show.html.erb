@@ -2,18 +2,11 @@
   <%= property_photo(@property)%>
 </div>
 
-</div>
 
 <div class="container mt-5">
   <div class="row">
     <div class="col">
-    <%= render @property %>
+      <%= render @property %>
     <div>
-      <%= link_to "Edit this property", edit_property_path(@property) %> |
-      <%= link_to "Back to properties", properties_path %>
-
-      <%= button_to "Destroy this property", @property, method: :delete %>
-    </div>
-  </div>
   </div>
 </div>

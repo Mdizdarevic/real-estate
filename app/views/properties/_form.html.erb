@@ -27,14 +27,19 @@
   </div>
 
   <div class="form-group" >
-    <%= form.label :photo %>
-    <%= form.file_field :photo, class: "form-control" %>
-    <%= form.hidden_field :photo_cache %>
+    <%= form.label :image %>
+    <%= form.file_field :image, class: "form-control" %>
+    <%# <%= form.hidden_field :photo_cache %> 
 
-    <% if @property.photo.present? %>
-      <%= image_tag @property.photo.thumb.url, class: "mt-4" %>
+    <% if @property.image.attached? %>
+      <%= image_tag @property.image, class: "mt-4" %>
     <% end %>
   </div>
+  
+  <%# <div class="form-group" >
+    <%= form.label :pictures %>
+    <%# <%= form.file_field :pictures, multiple: true, class: "form-control" %>
+  <%# </div> %>
 
   <br/>
   <div class="actions" >
