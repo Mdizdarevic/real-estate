@@ -15,6 +15,7 @@
  */
 body {
     background-color:ghostwhite;
+    background: url("/assets/greymarble.jpeg");
 }
 .navbar-brand {
     text-decoration: underline 5px yellow;
@@ -30,4 +31,44 @@ body {
 
 .nav .sidebar-sticky {
     color: red;
+}
+
+.front-pic {
+    width: 100%;
+    z-index: 0;
+    filter: brightness(50%);
+}
+
+.front {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+.centered {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.card {
+    border: none; 
+    background: url('/assets/greymarble.jpeg');
+}
+
+.card-body {
+    width: 75%;
+    border-radius: 40px; 
+    background-color: #E7E9EB;
+    padding: 20px;
+    box-shadow: 5px 10px rgb(255,246,0);
+    width: auto;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.sign-in {
+    width: 100%;
 }

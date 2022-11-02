@@ -4,20 +4,36 @@
 
       <!-- Main jumbotron for a primary marketing message or call to action -->
       <div class="jumbotron">
-        <div class="container">
-          <h1 class="display-3">Search for your new home today...</h1>
-          <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>        </div>
       </div>
-
-      <section id="latest-properties" class="mt-5 mb-5">
-        <div class="container">
-          <div class="row-4">
-            <%= render "properties/latest_properties" %>
+      <div class="front">
+        <img class="front-pic" src="/assets/neighborhood.jpeg"/>
+          <div class="text-center centered">
+            <h1 class="display-3">Find for your new home today</h1>
+            <h3>We are a local real estate company specializing in getting people their dream house </h3>        
+          </div>
+      </div>
+      <% @properties.each do |property| %>
+      <div class="row gy-3 row-cols-flex" style="padding: 3%;">
+        <div class="col-sm">
+          <div class="card" class="card h-100">
+            <div class="row">
+              <div class="container text-center">
+                <div class="card-img td-example-same-image-height">
+                    <div class="container text-center">
+                      <img class="card-img-top"/> <%= link_to(property_thumbnail(property), property_path(property)) %>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title"><%= link_to property.address, property_path(property) %></h5>
+                    <h3>$<%= property.price %><h3>
+                </div>
+              </div>
           </div>
         </div>
-      </section>
+      </div>
+      <% end %>
 
-      <div class="container">
+      <%# <div class="container">
         <!-- Example row of columns -->
         <div class="row">
           <div class="col-md-4">
@@ -39,6 +55,6 @@
 
         <hr>
 
-      </div> <!-- /container -->
+      </div> <!-- /container --> %>
 
 </main>

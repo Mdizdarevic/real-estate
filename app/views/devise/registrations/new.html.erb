@@ -1,17 +1,24 @@
+<div style="background-color: ghostwhite">
 <section class="form-auth text-center">
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <h1 class="h3 mb-3 font-weight-normal">Please Sign up</h1>
   <%= render "devise/shared/error_messages", resource: resource %>
 
-    <%= f.text_field :first_name, autofocus: true, class: "form-control", placeholder: "First Name" %>
-    <%= f.text_field :last_name, class: "form-control", placeholder: "Last Name" %>
-    <%= f.email_field :email, autocomplete: "email", class: "form-control", placeholder: "Email" %>
-    <%= f.password_field :password, autocomplete: "new-password", class: "form-control", placeholder: "Password" %>
-    <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control", placeholder: "Password"  %>
-
-<button class="btn btn-lg btn-primary btn-block" type="submit">Sign up</button>
+    <%= f.text_field :first_name, autofocus: true, style: "border: solid 2px black; border-radius: 40px", class: "form-control", placeholder: "First Name" %>
+    <br/>
+    <%= f.text_field :last_name, style: "border: solid 2px black; border-radius: 40px", class: "form-control", placeholder: "Last Name" %>
+    <br/>
+    <%= f.email_field :email, autocomplete: "email", style: "border: solid 2px black; border-radius: 40px", class: "form-control", placeholder: "Email" %>
+    <br/>
+    <%= f.password_field :password, autocomplete: "new-password", style: "border: solid 2px black; border-radius: 40px", class: "form-control", placeholder: "Password" %>
+    <br/>
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", style: "border: solid 2px black; border-radius: 40px", class: "form-control", placeholder: "Password"  %>
+    <br/>
+<button style="border: solid 2px black; border-radius: 40px" class="sign-in btn btn-lg btn-primary btn-block" type="submit">Sign up</button>
 <% end %>
 
 <%= render "devise/shared/links" %>
+  <p class="mt-5 mb-3 text-muted">© 2022</p>
 </section>
+</div>
