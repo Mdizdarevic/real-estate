@@ -44,7 +44,7 @@ body {
     text-align: center;
     color: white;
 }
-.centered {
+.home-text {
     position: absolute;
     top: 25%;
     left: 50%;
@@ -66,9 +66,33 @@ body {
     position: absolute;
     top: 100%;
     left: 50%;
-    transform: translate(-50%, -50%)
+    transform: translate(-50%, -50%);
+}
+
+.show-body {
+    width: 75%;
+    border-radius: 40px; 
+    background-color: #E7E9EB;
+    padding: 20px;
+    font-size: 30px;
+    box-shadow: 5px 10px rgb(255,246,0);
+    width: auto;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .sign-in {
     width: 100%;
+}
+
+.show {
+    background: white;
+    padding: 20px;
+}
+
+.seller {
+    font-size: 20px;
+    text-align: right;
 }

@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get "/reports" => 'reports#index', as: :reports
+  get "/customers" => 'customers#index', as: :customers
+  get "/photos" => 'photos#index', as: :photos
+  get "/sellers" => 'sellers#index', as: :sellers
   get "/dashboard" => 'dashboard#index', as: :dashboard
   resources :properties
   devise_for :accounts

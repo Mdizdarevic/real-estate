@@ -1,0 +1,18 @@
+<h1 class="h3">Photos</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Album of all photos of each property: </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @properties.each do |property| %>
+    <tr>
+        <td><%= image_tag url_for(property.image) %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+<br/>
